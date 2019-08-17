@@ -1,15 +1,18 @@
 [package]
-name = "amethyst-starter-2d"
-version = "0.1.0"
-authors = ["Hilmar Wiegand <me@hwgnd.de>"]
+name = "{{project_name}}"
+version = "{{version}}"
+authors = ["{{author}}"]
 edition = "2018"
+description = "{{ description }}"
+license = "{{ license_id }}"
+readme = "README.md"
 
 [dependencies]
 amethyst = "0.12.0"
 log = { version = "0.4.6", features = ["serde"] }
 
 [features]
-default = ["vulkan"]
+default = ["{{#if (eq (env_var "OS") "macos") }}metal{{ else }}vulkan{{/if}}"]
 empty = ["amethyst/empty"]
 metal = ["amethyst/metal"]
 vulkan = ["amethyst/vulkan"]

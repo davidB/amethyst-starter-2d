@@ -15,18 +15,30 @@ This project template will get you from 0 to drawing something on the screen in 
 
 ## Quickstart
 
-- Clone the repository
+- install [ffizer](https://github.com/ffizer/ffizer/)
+  ```bash
+  cargo install ffizer --force --features cli
+  ```
 
-```bash
-git clone https://github.com/amethyst/amethyst-starter-2d.git
-cd amethyst-starter-2d
-```
+- Generate the project project from the template
+
+  ```sh
+  ffizer apply -s https://github.com/davidB/amethyst-starter-2d.git --rev variant/ffizer -d my-game
+  cd my-game
+  ```
+
+- View the content
+  
+  ```sh
+  cat README.md
+  ls
+  ```
 
 - Build and run the project
 
-```bash
-cargo run
-```
+  ```sh
+  cargo run
+  ```
 
 #### For Mac Users
 
